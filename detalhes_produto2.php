@@ -46,10 +46,16 @@ include_once("templates/header.php");
                 <p class="h3 mt-3" style="font-weight:400;">Avaliação de Produto</p>
                 <!-- Preço -->
                 <p class="h2 mt-3">R$50,39</p>
+
+                <input type="text" placeholder="Quantidade" style="border-radius:5px;" class="form-control">
                 <!-- Adicionar ao Carrinho -->
-                <button class="add_carrinho mt-4 text-center btn" type="submit">Adicionar ao Carrinho</button>
+                <a href="<?= $BASE_URL ?>carrinho.php" class="add_carrinho mt-4 text-center btn" type="submit">Adicionar
+                    ao Carrinho</a>
+
+
                 <br><br>
             </div>
+            <!-- Container com os detalhes do produto -->
             <div class="detalhes2 col-lg-4 col-md-12 col-sm-5 justify-content-center p-2 card light-color">
                 <p class="h4 mt-3" style="font-weight:400;">Descrição do produto
                 </p>

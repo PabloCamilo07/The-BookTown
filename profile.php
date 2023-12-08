@@ -5,6 +5,7 @@
   require_once("models/User.php");
   require_once("Controller/UserController.php");
 
+  // Criação de classe
   $user = new User();
   $userController = new UserController($conn, $BASE_URL);
   
@@ -41,13 +42,23 @@
   }
 
 ?>
+
+  <!-- CONTAINER DE POSICIONAMENTO COM ID -->
   <div id="main-container" class="container mt-5" style="margin-bottom:150px;">
+
+    <!-- Posicionamento Grid -->
     <div class="col-md-8 offset-md-2">
+
+      <!-- Linha de posiconamento das colunas -->
       <div class="row profile-container">
+
+      <!-- Container com descrição do perfil -->
         <div class="col-md-12 about-container">
 
+        <!-- Título com o nome de usuário -->
           <h1 class="page-title rounded fullname"><?= $fullName ?></h1>
 
+            <!-- Div de imagem -->
             <div id="profile-image-container" class="profile-image" style="background-image: url('<?= $BASE_URL ?>img/users/<?= $userData->image ?>')"><img src="<?=$BASE_URL ?>img/users/<?= $userData->image.'' ?>" width="50px" height="50px">
             </div>
             <h3 class="about-title">Sobre:</h3>

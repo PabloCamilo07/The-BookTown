@@ -3,13 +3,22 @@
 include_once("templates/header.php");
 ?>
 
+<!-- CONTAINER DE POSICIONAMENTO COM ID -->
 <div class="container col-12 col-md-9 col-sm-6 mb-5" id="register-container">
+
+    <!-- Linha -->
     <div class="row gx-5">
+
+        <!-- Coluna geral com as duas partes do container -->
         <div class="col-md-6 cadastro">
 
+            <!-- Título com ícone de pessoa -->
             <h2><i class="bi bi-person-fill"></i>Faça seu cadastro</h2>
 
+            <!-- Container com as duas partes, o formulário e a imagem -->
             <div class="d-flex" style="gap:100px;">
+
+            <!-- Formulário -->
                 <form id="create-form" class="col-sm-6" action="<?= $BASE_URL ?>config/process.php" method="POST">
                     <!-- Campo oculto para indicar o tipo de operação (criação de usuário) -->
                     <input type="hidden" name="type" value="register">
@@ -75,6 +84,8 @@ include_once("templates/header.php");
                         <a class="btn btn-outline-success m-4" href="<?= $BASE_URL ?>index.php" role="button">Voltar</a>
                     </div>
                 </form>
+
+                <!-- Coluna com imagem da TheBooktown e link para página de login -->
                 <div class="col-md-12 mt-5 img-cadastro">
                     <div class="row align-items-center">
                         <div class="col-12">
@@ -94,6 +105,7 @@ include_once("templates/header.php");
 </div>
 </div>
 
+<!-- Inclusão de arquivo footer.php -->
 <?php
 include_once("templates/footer.php");
 ?>

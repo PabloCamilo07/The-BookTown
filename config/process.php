@@ -164,9 +164,9 @@
     $confirmpassw = filter_input(INPUT_POST, "confirmpassw");
 
     // Resgata dados do usuário
-    $userData = $userController->verifyToken();
+    $productData = $productController->verifyToken();
     
-    $id = $userData->id;
+    $id = $productData->id;
 
     if($passw == $confirmpassw) {
 
@@ -185,8 +185,6 @@
     }
 
   } 
-  // else {
+  
 
-  //   $message->setMessage("Informações inválidas!", "error", "../index.php");
-
-  // }
+  

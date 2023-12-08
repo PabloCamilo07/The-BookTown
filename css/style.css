@@ -3,37 +3,7 @@
   font-family:Arial, Helvetica, sans-serif;
 }
 
-/* cor de fundo e do texto */
-body {
-  color: #000;
-  background-color: white;
-}
-
-#register-container{
-  background-color: #DBB372;
-  border-radius: 10px;
-  width: 950px;
- 
-}
-
-#create-form{
-  width:100%;
-}
-@media (max-width:768px){
-  .img-cadastro{
-    display: none;
-  }
-  
-  #cadastro{
-    max-width: 220px;
-    flex-wrap: wrap;
-  }
-}
-
-.cadastro{
-  padding: 50px;
-}
-/* cores do background */
+/* cORES DO BACKGROUND e MENSAGEM */
 .primary-bg-color {
   background-color: #DBB372;
 }
@@ -80,7 +50,47 @@ body {
   background-color: #D1E7DD;
   border-color: #BADBCC;
 }
+/* cor de fundo e do texto */
+body {
+  color: #000;
+  background-color: white;
+}
 
+/* CADASTRO */
+/* Container de Posicionamento da página de cadastro */
+#register-container{
+  background-color: #DBB372;
+  border-radius: 10px;
+  width: 950px;
+ 
+}
+
+/* Formulário */
+#create-form{
+  width:100%;
+}
+
+/* Responsividade do cadastro */
+@media (max-width:768px){
+
+  /* Desativação da imagem */
+  .img-cadastro{
+    display: none;
+  }
+  
+  /* Reajuste do formulário */
+  #cadastro{
+    max-width: 220px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Coluna cadastro */
+.cadastro{
+  padding: 50px;
+}
+
+/* NAVBAR */
 /* estilizando a navbar */
 #navbar .navbar-nav {
   flex-direction: row;
@@ -132,6 +142,7 @@ body {
   box-shadow: none;
 }
 
+/* Imagem de Logo da Navbar */
 .logonav{
   width: 85px;
   height: 85px;
@@ -143,10 +154,12 @@ body {
   width: 100%;
   text-align: center;
 }
+
 /* mobile */
 #navbar-items {
   justify-content: space-between;
 }
+
 /* mobile */
 #search-form,
 #news-form {
@@ -213,6 +226,7 @@ body {
   padding: 0;
 }
 
+/* Responsividade do carrossel */
 @media(min-width: 768px) {
   #slider .carousel-item,
   #slider img {
@@ -228,6 +242,8 @@ body {
     font-size: 4em;
   }
 }
+
+/* Carrossel */
 .carousel-caption {
   bottom: 5em;
   padding: 1em;
@@ -243,7 +259,7 @@ body {
 
 /* Container Total */
 /* Item das linhas Slide 1 Mangaka*/
-
+/* Imagem de fundo do carrossel */
 #mangaka {
   background-image: url(../img/fundo_banner2_dark.jpeg);
 
@@ -259,7 +275,7 @@ body {
   color: white;
 }
 
-/* Imagem */
+/* Definição das imagens */
 .item-line-1 {
   background-color: rgb(0, 0, 0, 0.5);
   padding: 30px;
@@ -401,6 +417,7 @@ body {
   margin-top: -3em; /* Deslocamento negativo para ajustar o posicionamento vertical */
   z-index: 10;/* Define a ordem de empilhamento na renderização */
 }
+
 /* Estilos para as colunas da seção de mini-banners */
 #mini-banners .col-12 {
   z-index: 1;/* Define a ordem de empilhamento dentro das colunas */
@@ -417,14 +434,16 @@ body {
     max-width: 30%;
   }
 }
+
 /* Estilos para os títulos h2 dentro das colunas */
-#mini-banners .col-12 h2 {
+#mini-banners .col-12 p {
   text-transform: uppercase;
   max-width: 50px;
   font-size: 2.2em;
   font-weight: 700;
   line-height: 1em;
 }
+
 /* Estilos para as imagens dentro das colunas */
 #mini-banners .col-12 img {
   height: 220px;
@@ -432,6 +451,7 @@ body {
   right: 1rem;
   bottom: 1rem;
 }
+
 /* Estilos para os links dentro das colunas */
 #mini-banners .col-12 a {
   font-weight: bold;
@@ -443,23 +463,33 @@ body {
 #mini-banners .col-12 a:hover {
   color: #101010;
 }
+
 /* Estilos específicos para o hover do primeiro mini-banner */
-#mini-banners #mini-banner-1 a:hover {
-  color: #d7e1dd;
+.mini-banners {
+  transition: 0.3s ease-in;
 }
 
-#mini-banners #mini-banner-3 a {
-  color: #101010;
-}
-
-#mini-banners #mini-banner-3 a:hover {
+/* Hover dos mini banners, cor da letra e o tamanho */
+#mini-banners #mini-banner-1:hover {
   color: #fff;
+  scale: 1.1;
+}
+
+#mini-banners #mini-banner-2:hover {
+  color: #fff;
+  scale: 1.1;
+}
+
+#mini-banners #mini-banner-3:hover {
+  color: #fff;
+  scale: 1.1;
 }
 
 /* BEST SELLERS - Mais vendidos */
 #best-sellers {
   /* espaçamento em superios e inferior da sessão */
   padding: 4em;
+  
 }
 
 #best-sellers .row {
@@ -468,6 +498,14 @@ body {
 
 #best-sellers .col-md-3 {
   padding: 0;
+}
+
+#best-sellers img{
+  transition: 0.3s ease-in;
+}
+
+#best-sellers img:hover{
+  scale: 1.1;
 }
 
 /* Estilos para elementos com a classe .title */
@@ -522,7 +560,61 @@ body {
   border-color: #702d03; /* Cor da borda ao passar o mouse */
   color: #ffffff;
 }
-/* Banner destaque */
+
+
+/* Responsividade do tamanho de tablet*/
+@media screen and (min-width: 768px) and (max-width: 1199px){
+  
+  /* Container texto Carrossel 1 */
+  #semana-mangaka{
+    margin-top: 50px;
+  }
+  
+  /* Texto Carrossel */
+  #semana-mangaka p{
+    font-size: 1.4em;
+    margin-top: 50px;
+  }
+
+  /* Imagem do Carrossel 1 */
+  .joyboy-img{
+    scale: 0.5;
+    margin-left: -150px;
+    margin-top: -35px;
+  }
+
+   /* Imagem do Carrossel 2 */
+  .wano-mangaka{
+    scale: 0.7;
+    
+  }
+
+  /* Container texto Carrossel 2 */
+  #novos-cap{
+    padding-top: 50px;
+  }
+  /* Texto do Carrossel 2 */
+  #novos-cap p{
+    font-size: 1.6em;
+  }
+    /* Imagem do Carrossel 3 */
+  /* Tamanho Letra Mini banners*/
+  #mini-banners .col-12 p{
+    font-size: 1.5em;
+  }
+
+  /* Tamanho do card dos best-sellers */
+  .card-best-sellers{
+    height: 500px;
+  }
+
+  /* DETALHES DO PRODUTO */
+  .bordinha, .detalhes, .detalhes2, .detalhes3, .detalhes4{
+    margin: auto;
+  }
+}
+
+/* BANNER DE DESTAQUE */
 #bottom-banner {
   background-color: #DBB372; 
   padding: 6em;
@@ -544,6 +636,14 @@ body {
 
 #bottom-banner img {
   max-width: 200px;
+}
+
+#btn-marcelo{
+  background-color: #DBB372;
+}
+
+#btn-marcelo:hover{
+  background-color: #702d03;
 }
 
 @media(min-width: 768px) {
@@ -585,7 +685,7 @@ body {
   margin: 2em auto; /* Margens superior e inferior automáticas e margem lateral 2em */
 }
 
-/* Galeria */
+/* GALERIA */
 #gallery .image-container {
   background-size: cover;
   background-position: center;
@@ -599,6 +699,7 @@ body {
   border-color: #702d03;
 }
 
+/* Imagens definidas como plano de fundo das divs */
 #insta1 {
   background-image: url('../img/insta1.jpg');
 }
@@ -739,6 +840,7 @@ body {
   color: #fff;
 } 
 
+/* LOGIN */
 .body2 {
   font-family: Arial, sans-serif;
   /* cor do fundo */
@@ -793,6 +895,7 @@ label {
   background-color:#365964;
 }
 
+/* RESPONSIVIDADE Container Posicionamento cadastro e login */
 @media(max-width:768px){
 
   #register-container{
@@ -805,12 +908,31 @@ label {
   
 }
 
+/* PÁGINA DE DETALHES DO PRODUTO */
 .container-produto img{
   transition: 0.1s ease-in;
 }
+
 .container-produto img:hover{
   scale: 1.05;
 }
+
+/* Margens das imagens que estavam meio deslocadas */
+.img_detalhe1_1{
+  margin-left: 25px;
+}
+.img_detalhe1_2{
+  margin-left: 75px;
+}
+.img_detalhe3_1{
+  margin-left: 30px;
+}
+.img_detalhe3_2{
+  margin-left: 75px;
+}
+
+
+/* Borda das informações principais do livro */
 .bordinha{
   width: 450px;
   height: 450px;
@@ -819,16 +941,17 @@ label {
 }
 
 /* Texto de detalhes do produto */
-.bordinha p , .detalhes p , .detalhes2 p{
+.bordinha p , .detalhes p , .detalhes2 p, .detalhes3 p, .detalhes4 p{
   color: #000;
 }
 
+/* Quadros de descrição do produto, no caso a sinopse da história de cada um */
 .detalhes{  
   width: 450px;
-  height: 320px;
+  height: 700px;
   transition: 0.2s ease-in;
+  
 }
-
 .detalhes2{
   width: 450px;
   height: 370px;
@@ -836,10 +959,26 @@ label {
   transition: 0.2s ease-in;
 }
 
-.detalhes:hover, .detalhes2:hover, .bordinha:hover{
+.detalhes3{
+  width: 450px;
+  height: 420px;
+  margin-top: 20px;
+  transition: 0.2s ease-in;
+}
+
+.detalhes4{
+  width: 450px;
+  height: 370px;
+  margin-top: 20px;
+  transition: 0.2s ease-in;
+}
+
+/* Hover da borda com as informações principais e dos quadros de sinopse do livro */
+.detalhes:hover, .detalhes2:hover, .detalhes3:hover, .detalhes4:hover, .bordinha:hover{
   border: 1px solid #508696; 
 }
 
+/* Responsividade Detalhes Produto */
 @media(max-width:768px){
   .container-produto{
     flex-wrap: wrap;
@@ -851,12 +990,28 @@ label {
     
   }
 
-  .bordinha , .detalhes , .detalhes2{
+  /* Definição de tamanho dos detalhes */
+  .bordinha , .detalhes , .detalhes2, .detalhes3, .detalhes4{
     max-width: 350px;
     margin: 0;
   }
+
+  /* Recentralizando na página as imagens que antes tinham margem por estarem deslocadas */
+  .img_detalhe1_1{
+    margin-left: 0px;
+  }
+  .img_detalhe1_2{
+    margin-left: 0px;
+  }
+  .img_detalhe3_1{
+    margin-left: 0px;
+  }
+  .img_detalhe3_2{
+    margin-left: 0px;
+  }
 }
 
+/* Texto dentro do quadro de descrição */
 .description{
   width: 100%;
   font-size: 15px;
@@ -905,4 +1060,47 @@ label {
   align-self: flex-end;
   justify-self: right;
 
+}
+
+/* COMPRA CONFIRMADA */
+.quadro-compra{
+  margin: auto;
+  height: 50vh;
+  width: 25vw;
+  border: 5px solid #000;
+  border-radius: 5px;
+  flex-direction: column;
+}
+
+.correct{
+  border-radius: 200px;
+  background-color: #508696;
+  height: 161px;
+  
+}
+.bi-check-circle{
+  font-size: 150px;
+  margin: auto;
+  position: relative;
+  bottom: 28px;
+  color: white;
+  margin: 5px;
+}
+
+@media (max-width:768px){
+  .quadro-compra{
+    min-width: 300px;
+  }
+
+  .correct{
+    height: 121px;
+    width: 121px;
+  }
+
+  .bi-check-circle{
+    font-size: 113px;
+    bottom: 21px;
+    right: 1px;
+    
+  }
 }
