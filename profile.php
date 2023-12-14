@@ -27,6 +27,7 @@
 
   } else {
 
+    // Usa o controlador de usuário para buscar os dados do usuário com o ID especificado.
     $userData = $userController->findById($id);
 
     // Se não encontrar usuário
