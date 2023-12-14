@@ -9,8 +9,11 @@ require_once("Controller/UserController.php");
 $user = new User();
 $userController = new UserController($conn, $BASE_URL);
 
+// Verifica o token do usuário para autenticação. Se o token for válido, recupera os dados do usuário.
 $userData = $userController->verifyToken(true);
 
+
+// Obtém o nome completo do usuário usando o método getFullName da classe User. Verifica se o usuário possui uma imagem de perfil; se não tiver, define uma imagem padrão.
 $fullName = $user->getFullName($userData);
 
 if ($userData->image == "") {
@@ -25,6 +28,8 @@ if ($userData->image == "") {
   <!-- Container de coluna para ajustar na grade -->
   <div class="col-md-12">
 
+
+    <!-- Inicia um formulário que será enviado para process.php para processamento. Este formulário inclui campos para editar o nome, sobrenome, email, imagem de perfil e uma descrição sobre o usuário. -->
     <!-- Formulário de edição de perfil -->
     <form action="<?= $BASE_URL ?>config/process.php" method="POST" enctype="multipart/form-data">
 
@@ -80,6 +85,8 @@ if ($userData->image == "") {
       </div>
     </form>
 
+
+    <!-- Inicia uma seção para a alteração de senha, que também se comunica com process.php. Inclui campos para inserção da nova senha e confirmação. -->
     <!-- Div de alterar senha -->
     <div class="row" id="change-password-container">
       <div class="col-md-4">
