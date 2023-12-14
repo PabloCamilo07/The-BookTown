@@ -12,6 +12,7 @@
   // Receber id do usuário
   $id = filter_input(INPUT_GET, "id");
 
+  // Verifica se o ID está vazio. Se estiver, ele tenta usar o ID armazenado em $userData->id. Se não houver nenhum ID disponível, exibe uma mensagem de erro.
   if(empty($id)) {
 
     if(!empty($userData)) {
@@ -26,6 +27,7 @@
 
   } else {
 
+    // Usa o controlador de usuário para buscar os dados do usuário com o ID especificado.
     $userData = $userController->findById($id);
 
     // Se não encontrar usuário
@@ -35,6 +37,7 @@
 
   }
 
+  // Cria uma variável $fullName usando o método getFullName da classe User. Em seguida, verifica se há uma imagem de perfil e, se não houver, define uma imagem padrão.
   $fullName = $user->getFullName($userData);
 
   if($userData->image == "") {
