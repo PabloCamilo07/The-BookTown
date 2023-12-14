@@ -92,10 +92,12 @@ body {
 
 /* NAVBAR */
 /* estilizando a navbar */
+
 #navbar .navbar-nav {
   flex-direction: row;
   /* move os itens para a direita */
   justify-content: flex-end;
+ 
 }
 /* itens da navbar */
 #navbar .navbar-nav li {

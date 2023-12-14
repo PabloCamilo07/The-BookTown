@@ -164,9 +164,9 @@
     $confirmpassw = filter_input(INPUT_POST, "confirmpassw");
 
     // Resgata dados do usuário
-    $productData = $productController->verifyToken();
+    $userData = $userController->verifyToken();
     
-    $id = $productData->id;
+    $id = $userData->id;
 
     if($passw == $confirmpassw) {
 

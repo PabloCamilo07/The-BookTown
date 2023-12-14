@@ -53,7 +53,7 @@ if ($userData->image == "") {
           </div>
           <div class="form-group">
             <label for="email">E-mail:</label>
-            <input type="text" readonly class="form-control disabled" id="email" name="email"
+            <input type="text" class="form-control" id="email" name="email"
               placeholder="Digite o seu nome" value="<?= $userData->email ?>">
           </div>
           <br>
